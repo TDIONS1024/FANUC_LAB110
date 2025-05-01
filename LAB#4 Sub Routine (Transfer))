@@ -1,0 +1,32 @@
+  2:  UTOOL_NUM=3 ;
+   3:J P[1:APP] 50% FINE Tool_Offset,PR[2:PICK_OFF]    ;
+   4:  WAIT DI[22:LS2]=ON    ;
+   5:L P[1:APP] 50mm/sec FINE    ;
+   6:  DO[19:Tool1]=OFF ;
+   7:J P[1:APP] 100% FINE Tool_Offset,PR[2:PICK_OFF]    ;
+   8:  DO[23:Transfer]=ON ;
+   9:  WAIT DI[23:LS3]=ON    ;
+  10:  DO[23:Transfer]=OFF ;
+  11:  WAIT DI[22:LS2]=ON    ;
+  12:  DO[24:Clamp]=ON ;
+  13:  WAIT DI[25:Prox2 ]=ON    ;
+  14:J P[3:APP1] 100% FINE Tool_Offset,PR[2:PICK_OFF]    ;
+  15:L P[3:APP1] 50mm/sec FINE    ;
+  16:  DO[19:Tool1]=ON ;
+  17:  DO[24:Clamp]=OFF ;
+  18:  WAIT DI[24:LS4]=ON    ;
+  19:L P[3:APP1] 100mm/sec FINE Tool_Offset,PR[2:PICK_OFF]    ;
+  20:  CALL LAB4DROP ;
+/POS
+P[1:"APP"]{
+   GP1:
+	UF : 2, UT : 3,		CONFIG : 'N U T, 0, 0, 0',
+	X =   411.09  mm,	Y =   146.05  mm,	Z =     4.75  mm,
+	W =  -176.37 deg,	P =     3.36 deg,	R =  -162.58 deg
+};
+P[3:"APP1"]{
+   GP1:
+	UF : 2, UT : 3,		CONFIG : 'N U T, 0, 0, 0',
+	X =   408.23  mm,	Y =     4.86  mm,	Z =   -14.09  mm,
+	W =  -176.36 deg,	P =     3.38 deg,	R =  -162.71 deg
+};
