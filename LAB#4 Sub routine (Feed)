@@ -1,0 +1,20 @@
+ 2:  UTOOL_NUM=3 ;
+   3:J P[1] 100% FINE Tool_Offset,PR[2:PICK_OFF]    ;
+   4:   ;
+   5:  DO[22:Feeder]=ON ;
+   6:  WAIT DI[20:Prox1]=ON    ;
+   7:  !MOVING 2 P ;
+   8:J P[1] 100% FINE    ;
+   9:  DO[19:Tool1]=ON ;
+  10:  DO[22:Feeder]=OFF ;
+  11:  WAIT DI[21:LS1]=ON    ;
+  12:  !MOVING P ;
+  13:J P[1] 100% FINE Tool_Offset,PR[2:PICK_OFF]    ;
+  14:  CALL LAB4TRAN ;
+/POS
+P[1]{
+   GP1:
+	UF : 0, UT : 3,		CONFIG : 'N U T, 0, 0, 0',
+	X =  -622.04  mm,	Y =   978.67  mm,	Z =  -117.51  mm,
+	W =  -177.44 deg,	P =     4.56 deg,	R =   137.37 deg
+};
