@@ -1,0 +1,24 @@
+ 1:  UTOOL_NUM=3 ;
+   2:J P[1:HOME] 50% FINE    ;
+   3:J P[2:APP] 50% FINE Offset,PR[15:FEEDERPICK]    ;
+   4:  DO[19:Tool1]=OFF ;
+   5:L P[5] 100mm/sec CNT100    ;
+/POS
+P[1:"HOME"]{
+   GP1:
+	UF : 0, UT : 3,		CONFIG : 'N U T, 0, 0, 0',
+	X =  -148.74  mm,	Y =   862.33  mm,	Z =     6.82  mm,
+	W =  -176.05 deg,	P =     2.30 deg,	R =   141.55 deg
+};
+P[2:"APP"]{
+   GP1:
+	UF : 0, UT : 3,		CONFIG : 'N U T, 0, 0, 0',
+	X =  -254.04  mm,	Y =  1099.17  mm,	Z =     6.88  mm,
+	W =  -175.75 deg,	P =     2.05 deg,	R =   141.30 deg
+};
+P[5]{
+   GP1:
+	UF : 0, UT : 3,		CONFIG : 'N U T, 0, 0, 0',
+	X =  -255.37  mm,	Y =  1098.87  mm,	Z =    35.67  mm,
+	W =  -175.53 deg,	P =     1.86 deg,	R =   141.11 deg
+};
