@@ -1,0 +1,11 @@
+1:  UTOOL_NUM=3 ;
+   2:   ;
+   3:  DO[19:Tool1]=OFF ;
+   4:  DO[22:Feeder]=OFF ;
+   5:  DO[23:Transfer]=OFF ;
+   6:  DO[24:Clamp]=OFF ;
+   7:  R[1:X_LOOP]=0    ;
+   8:  LBL[8] ;
+   9:  CALL LAB4FEED ;
+  10:  R[1:X_LOOP]=R[1:X_LOOP]+1    ;
+  11:  IF R[1:X_LOOP]<4,JMP LBL[8] ;
