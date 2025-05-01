@@ -1,0 +1,48 @@
+ 1:  UTOOL_NUM=5 ;
+   2:J P[1:HOME] 100% FINE    ;
+   3:J P[2:APPR] 100% FINE    ;
+   4:L P[3:P1] 100mm/sec CNT100    ;
+   5:  DO[19]=ON ;
+   6:L P[4:P2] 100mm/sec FINE    ;
+   7:L P[5] 100mm/sec CNT100    ;
+   8:J P[6] 40% CNT20    ;
+   9:  DO[19]=OFF ;
+  10:  CALL TSLAB5 ;
+  11:  CALL TSLAB5 ;
+/POS
+P[1:"HOME"]{
+   GP1:
+	UF : 6, UT : 5,		CONFIG : 'N U T, 0, 0, 0',
+	X =    88.83  mm,	Y =    30.71  mm,	Z =   242.44  mm,
+	W =   163.94 deg,	P =    -3.38 deg,	R =  -115.89 deg
+};
+P[2:"APPR"]{
+   GP1:
+	UF : 6, UT : 5,		CONFIG : 'N U T, 0, 0, 0',
+	X =   294.17  mm,	Y =   -75.53  mm,	Z =   186.30  mm,
+	W =  -158.99 deg,	P =     -.90 deg,	R =  -115.74 deg
+};
+P[3:"P1"]{
+   GP1:
+	UF : 6, UT : 5,		CONFIG : 'N U T, 0, 0, 0',
+	X =   390.23  mm,	Y =  -100.10  mm,	Z =     2.31  mm,
+	W =  -154.80 deg,	P =    -2.63 deg,	R =  -116.55 deg
+};
+P[4:"P2"]{
+   GP1:
+	UF : 6, UT : 5,		CONFIG : 'N U T, 0, 0, 0',
+	X =   292.13  mm,	Y =   -38.51  mm,	Z =   247.00  mm,
+	W =  -154.80 deg,	P =    -2.63 deg,	R =  -116.55 deg
+};
+P[5]{
+   GP1:
+	UF : 6, UT : 5,		CONFIG : 'N U T, 0, 0, 0',
+	X =   292.13  mm,	Y =   -38.51  mm,	Z =   247.00  mm,
+	W =  -154.80 deg,	P =    -2.63 deg,	R =  -116.55 deg
+};
+P[6]{
+   GP1:
+	UF : 6, UT : 5,		CONFIG : 'N U T, 0, 0, 0',
+	X =    99.28  mm,	Y =    57.19  mm,	Z =   142.56  mm,
+	W =   176.98 deg,	P =     2.11 deg,	R =  -116.81 deg
+};
